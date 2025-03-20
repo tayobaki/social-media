@@ -23,6 +23,8 @@ app.use(
 	})
 );
 
+app.get("/", (req, res) => res.status(200).json({ message: "Hello World" }));
+
 app.use(express.json({ limit: "5mb" })); // parse JSON request bodies
 app.use(cookieParser());
 
